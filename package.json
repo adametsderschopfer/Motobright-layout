@@ -1,8 +1,8 @@
 {
-  "name": "legancy",
+  "name": "motobright",
   "description": "",
   "author": "Tydorskaya Aleksandra & Vladislav Adamets",
-  "version": "2.0",
+  "version": "2.0.0",
   "license": "ISC",
   "main": "gulpfile.js",
   "scripts": {
