@@ -7,13 +7,25 @@ $color-black: #000000;
 $color-attention: #cb2222;
 $color-yellow: #ebb500;
 $color-green: #0eb461;
-$basic : (
-  main: #191919,
-  primary: #e5df24,
-  hover-main: #505050,
-  hover-primary: #bda588,
+
+$color : (
+  primary-red: #e31235,
+  c_20: #20bd39,
+  primary-blue: #0047ff,
+  c_e7: #e753ff,
+  c_ff: #ff0007,
+  c_00: #00b2ff,
+  c_79: #79e27d,
+  link: #4176ff,
+  c_f1: #f15357,
 );
+
 $gray : (
+  c_f5: #f5f5f6,
+  c_ea: #eaeaea,
+  c_f8: #f8f8fa,
+  c_f8_2: #f8f8f8,
+  sup-price: #a8a8a8,
   color_f5: #f5f6f7,
   color_89: #898383,
   color_b9: #b9b9b9,
@@ -26,8 +38,7 @@ $container-fluid-width: 1440px;
 $tablet-width: 768px;
 $desktop-width: $container-width - 1px;
 
-$font1: "ProximaNova", "Arial", sans-serif;
-$font2: "PTSerif", "Arial", sans-serif;
+$font1: "CeraPro", "Arial", sans-serif;
 
 /* TYPOGRAPHY */
 $font-sizes: (
