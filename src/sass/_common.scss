@@ -1,0 +1,151 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 14px;
+  overflow-x: hidden;
+  font-family: $font1;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+textarea:focus,
+input:focus,
+button {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  max-width: $container-fluid-width;
+  margin: auto;
+  padding: 0 2rem;
+
+  .container {
+    min-width: initial;
+    padding: 0;
+  }
+}
+
+.visible-m {
+  @include bp-tablet(min) {
+    display: none !important;
+  }
+
+  @include bp-tablet() {
+    display: block;
+  }
+}
+
+.visible-d {
+  @include bp-tablet(min) {
+    display: block;
+  }
+
+  @include bp-tablet() {
+    display: none !important;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &_v {
+    &-center {
+      align-items: center;
+    }
+
+    &-start {
+      align-items: flex-start;
+    }
+
+    &-end {
+      align-items: flex-end;
+    }
+  }
+
+  &_h {
+    &-center {
+      justify-content: center;
+    }
+
+    &-between {
+      justify-content: space-between;
+    }
+  }
+}
+
+.flex-grow {
+  &_top {
+    margin-top: auto;
+  }
+}
+
+.flex-double {
+  min-width: calc(50% - 1.5rem);
+  max-width: calc(50% - 1.5rem);
+
+  @include bp-tablet() {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.anchor-scroll {
+  position: relative;
+  top: -11rem;
+
+  @include bp-tablet() {
+    top: -6rem;
+  }
+}
+
+.ps__rail-y {
+  position: absolute;
+  right: 0;
+  left: auto !important;
+  width: 0.3rem;
+  background-color: transparent;
+  border-radius: 1rem;
+  z-index: 3;
+}
+
+.ps__thumb-y {
+  position: absolute;
+  width: 100%;
+  background-color: map-get($gray, color_ed);
+  border-radius: 0.3rem;
+}

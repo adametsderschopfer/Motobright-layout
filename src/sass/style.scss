@@ -1,0 +1,32 @@
+// ------------------------------------------ //
+// GENERAL
+// ------------------------------------------ //
+@import "normalize.css/normalize";
+@import "mixins";
+@import "fonts";
+@import "variables";
+@import "common";
+
+// ------------------------------------------ //
+// UI
+// ------------------------------------------ //
+@import "UI/button";
+@import "UI/social-networks";
+
+// ------------------------------------------ //
+// template-parts
+// ------------------------------------------ //
+@import "template-parts/header";
+@import "template-parts/footer";
+
+// ------------------------------------------ //
+// popups
+// ------------------------------------------ //
+/*@import "popups/header";*/
+
+// ------------------------------------------ //
+// BLOCKS
+// ------------------------------------------ //
+@import "blocks/popup";
+@import "blocks/scroll-top";
+

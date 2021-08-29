@@ -1,0 +1,29 @@
+.social-networks {
+  margin: 0 0 5rem 0;
+}
+
+.social-networks-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-networks__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+  background: $color-white;
+  margin-right: 2.5rem;
+  color: map-get($basic, main);
+  transition: color 0.3s;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: map-get($basic, primary);
+  }
+}

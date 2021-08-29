@@ -1,0 +1,62 @@
+.button-primary {
+  transition: all 0.2s;
+  border-radius: 0.3rem;
+  font-family: $font2;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 1.1rem 2rem;
+  border: none;
+
+  @include font-prop(paragraph-1);
+
+  &_main {
+    background: map-get($basic, main);
+    color: $color-white;
+
+    @include bp-tablet(min) {
+      &:hover {
+        background: map-get($basic, primary);
+        color: map-get($basic, main);
+      }
+    }
+  }
+
+  &_border-white {
+    background: transparent;
+    color: map-get($basic, main);
+    border: 0.1rem solid $color-white;
+
+    @include bp-tablet(min) {
+      &:hover {
+        background: $color-white;
+      }
+    }
+  }
+
+  &_border-gray {
+    background: transparent;
+    color: map-get($basic, main);
+    border: 0.1rem solid map-get($basic, main);
+
+    @include bp-tablet(min) {
+      &:hover {
+        background: map-get($basic, primary);
+        border-color: map-get($basic, primary);
+      }
+    }
+  }
+
+  &_primary {
+    background: map-get($basic, primary);
+    color: map-get($basic, main);
+
+    @include bp-tablet(min) {
+      &:hover {
+        background: map-get($basic, main);
+        color: $color-white;
+      }
+    }
+  }
+}
