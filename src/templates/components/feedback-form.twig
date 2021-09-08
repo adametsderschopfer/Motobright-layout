@@ -1,0 +1,35 @@
+<form class="feedback-from">
+    <div class="feedback-from__title">{{ title }}</div>
+    <div class="feedback-from__descr">{{ descr }}</div>
+
+    <div class="feedback-from__fields">
+        <div class="feedback-from__inputs">
+            <div class="input-cover">
+                <input type="text" placeholder="Имя" class="input">
+            </div>
+            <div class="input-cover">
+                <input type="text" placeholder="Телефон" class="input js-phone-mask">
+            </div>
+        </div>
+        
+        <div class="feedback-from__wide">
+            <textarea placeholder="Комментарий" class="input"></textarea>
+        </div>
+    </div>
+
+    <div class="feedback-from__submit">
+       <div class="feedback-from__button">
+           {% include "../UI/button.twig" with {
+               text: "Отправить",
+               type: "submit",
+               colorClass: "fill-blue",
+               size: "large",
+           } %}
+       </div>
+
+        {% include "../UI/checkbox.twig" with {
+            text: "Согласен с политикой конфиденциальности",
+            checked: true
+        }%}
+    </div>
+</form>

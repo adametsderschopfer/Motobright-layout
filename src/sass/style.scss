@@ -11,6 +11,9 @@
 // UI
 // ------------------------------------------ //
 @import "UI/button";
+@import "UI/input";
+@import "UI/checkbox";
+@import "UI/select";
 
 // ------------------------------------------ //
 // template-parts
@@ -26,6 +29,24 @@
 // ------------------------------------------ //
 // BLOCKS
 // ------------------------------------------ //
+@import "blocks/noUiSlider";
 @import "blocks/popup";
-@import "blocks/scroll-top";
-
+@import "blocks/catalog.section";
+@import "blocks/catalog.item";
+@import "blocks/feedback-big";
+@import "blocks/feedback-form";
+@import "blocks/how-we-works";
+@import "blocks/banner-support-info";
+@import "blocks/ceo";
+@import "blocks/advantages";
+@import "blocks/page-info";
+@import "blocks/contacts";
+@import "blocks/catalog.detail";
+@import "blocks/banner-call";
+@import "blocks/banner-slider";
+@import "blocks/default-popup-form";
+@import "blocks/basket";
+@import "blocks/call-popup";
+@import "blocks/catalog.filter";
+@import "blocks/contacts-place";
+@import "blocks/typed-page";

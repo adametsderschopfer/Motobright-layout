@@ -1,0 +1,102 @@
+.how-we-works {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+
+  @include bp-tablet() {
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+}
+
+.how-we-works__steps {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  @include bp-tablet() {
+    margin-top: 5rem;
+    flex-direction: row;
+  }
+}
+
+.how-we-works__steps-line {
+  margin-left: 11rem;
+
+  &-desktop {
+    @include bp-tablet() {
+      display: none;
+    }
+  }
+
+  &-mobile {
+    display: none;
+
+    @include bp-tablet() {
+      display: block;
+      margin-top: -2rem;
+    }
+  }
+
+  @include bp-desktopHD() {
+    margin-left: 0;
+  }
+}
+
+.how-we-works__steps-list {
+  display: flex;
+  margin-left: 9rem;
+  width: 100%;
+
+  @include bp-desktopHD() {
+    margin-left: 0;
+  }
+
+  @include bp-tablet() {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+.how-we-works__steps-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 26rem;
+
+  &:not(:last-of-type) {
+    margin-right: 7rem;
+  }
+
+  svg {
+    padding-right: 2rem;
+    height: 4rem;
+
+    @include bp-tablet() {
+      display: none;
+    }
+  }
+
+  @include bp-tablet() {
+    &:not(:last-of-type) {
+      margin-right: 0;
+    }
+  }
+}
+
+.how-we-works__steps-item-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+.how-we-works__steps-item--title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.how-we-works__steps-item--descr {
+  font-weight: 300;
+  font-size: 1.6rem;
+}

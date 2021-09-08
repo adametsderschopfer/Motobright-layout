@@ -1,0 +1,77 @@
+.default-popup-form {
+  padding: 3rem 4rem;
+  background-color: #292929;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  background-size: cover;
+  position: relative;
+
+  .feedback-from {
+    color: #ffffff;
+  }
+
+  .feedback-from__title {
+    font-size: 2.8rem;
+  }
+
+  .feedback-from__descr {
+    font-size: 1.4rem;
+  }
+
+  .feedback-from__fields {
+    flex-direction: column;
+
+    .input {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .feedback-from__inputs {
+    min-width: 100%;
+    max-width: 100%;
+
+    .input-cover:not(:last-of-type) {
+      margin: 0;
+    }
+
+    .input {
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  .feedback-from__wide {
+    margin: 0;
+  }
+
+  .feedback-from__submit {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin-top: 2rem;
+
+    .checkbox-fake {
+      border-color: #ffffff;
+    }
+
+    .checkbox-text {
+      color: #ffffff;
+    }
+  }
+
+  .feedback-from__button {
+    margin: 1.4rem 0 0;
+    max-width: 19.8rem;
+  }
+}
+
+.default-popup-form__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}

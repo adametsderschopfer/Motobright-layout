@@ -20,11 +20,6 @@ window.isDev = window.location.hostname === 'localhost' || window.location.hostn
   )
 })()
 
-// Scroll top
-;(function () {
-  let scrollTop = legancy.scrollTop()
-  scrollTop.init()
-})()
 
 // SVG
 ;(function () {
@@ -34,4 +29,75 @@ window.isDev = window.location.hostname === 'localhost' || window.location.hostn
       svg4everybody()
     }
   )
-})()
+})();
+
+;(function () {
+  function phoneMasks() {
+    const inputPhoneAll = document.querySelectorAll('.js-phone-mask');
+    const im = new Inputmask({'mask': '+7 (999) 999 99 99', showMaskOnHover : false});
+
+    if(inputPhoneAll.length) {
+      inputPhoneAll.forEach(function (el) {
+        im.mask(el);
+      });
+    }
+  }
+
+  window.phoneMasks = {
+    init: phoneMasks
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    window.phoneMasks.init();
+  });
+})();
+
+;(function() {
+  const orderPopupHtml = document.querySelector('.js-call-popup-order');
+  const techPopupHtml = document.querySelector('.js-call-popup-tech');
+
+  const orderPopup = legancyPopup({
+    content: orderPopupHtml,
+    title: '',
+    onAfterAppend(content) {
+      orderPopupHtml.remove();
+      const closeBtn = content.querySelector('.js-default-popup-form__close');
+
+      closeBtn.addEventListener('click', () => {
+         orderPopup.close();
+      });
+    }
+  });
+
+  const techPopup = legancyPopup({
+    content: techPopupHtml,
+    title: '',
+    onAfterAppend(content) {
+      techPopupHtml.remove();
+      const closeBtn = content.querySelector('.js-default-popup-form__close');
+
+      closeBtn.addEventListener('click', () => {
+         techPopup.close();
+      });
+    }
+  });
+
+  const orderPopupBtns = document.querySelectorAll('[data-popup="order"]');
+  const techPopupBtns = document.querySelectorAll('[data-popup="tech"]');
+
+  if (orderPopupBtns.length) {
+    for (const orderPopupBtn of orderPopupBtns) {
+      orderPopupBtn.addEventListener('click', () => {
+        orderPopup.open();
+      });
+    }
+  }
+
+  if (techPopupBtns.length) {
+    for (const techPopupBtn of techPopupBtns) {
+      techPopupBtn.addEventListener('click', () => {
+        techPopup.open();
+      });
+    }
+  }
+})();

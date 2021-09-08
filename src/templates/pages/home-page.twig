@@ -1,0 +1,18 @@
+<div class="container">
+    {% include "../components/banner-call.twig" %}
+
+    {% include "../components/catalog.section.twig" with {
+        filter: true,
+        title: "Мотоблоки Брайт"
+    } %}
+
+    {% include "../components/banner-support-info.twig" %}
+
+    {% include "../components/sect-how-we-works.twig" %}
+
+    {% include "../components/sect_ceo.twig" %}
+</div>
+
+<div class="container">
+    {% include "../components/feedback-big.twig" %}
+</div>

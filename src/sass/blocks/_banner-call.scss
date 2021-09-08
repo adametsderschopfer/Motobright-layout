@@ -1,0 +1,59 @@
+.banner-call {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+
+  @include bp-tablet() {
+    margin-bottom: 2rem;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+}
+
+.banner-call__info {
+  width: calc(74% - 2rem);
+  margin-right: 2rem;
+
+  @include bp-desktopXS() {
+    width: calc(64% - 2rem);
+
+    .banner-slider__slide {
+      height: 30rem;
+    }
+
+    .advantages__item {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include bp-tablet() {
+    width: 100%;
+
+    .banner-slider__slide {
+      height: 32vw;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+.banner-call__form {
+  width: calc(26% - 2rem);
+  margin-left: 2rem;
+
+  @include bp-desktopXS() {
+    width: calc(36% - 2rem);
+  }
+
+  @include bp-tablet() {
+    display: none;
+  }
+}
+
+.banner-call__adv {
+  margin-top: 4rem;
+
+  @include bp-tablet() {
+    display: none;
+  }
+}

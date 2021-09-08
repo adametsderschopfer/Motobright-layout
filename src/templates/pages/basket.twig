@@ -1,0 +1,246 @@
+{% include "../components/page-info.twig" with {
+    breadcrumbs: ['Главная', 'Корзина'],
+    title: "Корзина",
+    basket: true
+} %}
+
+<div class="basket">
+    <div class="basket__container container">
+        <div class="basket__wrapper">
+            <div class="basket__list">
+                <div class="basket__item">
+                    <div class="basket__item-left">
+                        <div class="catalog-item__mark purple wide">Хит</div>
+                        <div class="basket__item-img">
+                            <img src="./assets/images/products/product-1.png" alt="">
+                        </div>
+                        <div class="basket__item-is-buy">
+                            {% include "../UI/checkbox.twig" with {
+                                checked: true,
+                                green: true
+                            } %}
+                        </div>
+                    </div>
+                    <div class="basket__item-info">
+                        <div class="basket__item-info-uid">
+                            Артикул: <span>04.01.030.002</span>
+                        </div>
+
+                        <div class="basket__item-info-title">
+                            Мотоблок Мобил К МКМ-3 ПРО MBK0018443
+                        </div>
+
+                        <div class="basket__item-info-descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo egestas accumsan, odio a,
+                        </div>
+                    </div>
+                    <div class="basket__item-count">
+                        <div class="basket__item-count--wrapper">
+                            <div class="basket__item-count-title">
+                                Количество
+                            </div>
+
+                            <div class="basket__item-count--counter">
+                                <button class="basket__item-count--counter-minus">
+                                    -
+                                </button>
+
+                                <div class="basket__item-count--counter-count">1</div>
+
+                                <button class="basket__item-count--counter-plus">
+                                    +
+                                </button>
+                            </div>
+
+                            <div class="basket__item-count-exists">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.0729 1.01082C11.2995 0.797838 11.601 0.680091 11.9138 0.682428C12.2266 0.684765 12.5263 0.807004 12.7495 1.02335C12.9728 1.2397 13.1022 1.53323 13.1105 1.84201C13.1188 2.15079 13.0052 2.45067 12.7938 2.67836L6.37659 10.6031C6.26624 10.7205 6.13306 10.8147 5.98501 10.8801C5.83696 10.9454 5.67707 10.9807 5.51492 10.9836C5.35277 10.9866 5.19168 10.9572 5.04128 10.8973C4.89087 10.8374 4.75425 10.7482 4.63958 10.6349L0.383923 6.43271C0.26541 6.32367 0.170354 6.19217 0.104425 6.04606C0.0384964 5.89995 0.00304539 5.74223 0.000187725 5.5823C-0.00266994 5.42237 0.0271243 5.26351 0.0877924 5.1152C0.14846 4.96689 0.23876 4.83216 0.353304 4.71905C0.467847 4.60595 0.604289 4.51678 0.754488 4.45688C0.904688 4.39697 1.06557 4.36755 1.22753 4.37037C1.3895 4.3732 1.54923 4.4082 1.69719 4.4733C1.84516 4.5384 1.97833 4.63227 2.08876 4.74929L5.45662 8.07325L11.0424 1.04576C11.0524 1.03354 11.0632 1.02187 11.0745 1.01082H11.0729Z"
+                                          fill="#20BD39" />
+                                </svg>
+
+                                <span>В наличии</span>
+                            </div>
+                        </div>
+
+                        <div class="basket__item-price">
+                            56 900₽
+                        </div>
+                    </div>
+
+                    <div class="basket__item-remove">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L20 20" stroke="#CFCCCC" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                            <path d="M1 20L20 1.00002" stroke="#CFCCCC" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="basket__item">
+                    <div class="basket__item-left">
+                        <div class="basket__item-img">
+                            <img src="./assets/images/products/product-1.png" alt="">
+                        </div>
+                        <div class="basket__item-is-buy">
+                            {% include "../UI/checkbox.twig" with {
+                                checked: true,
+                                green: true
+                            } %}
+                        </div>
+                    </div>
+                    <div class="basket__item-info">
+                        <div class="basket__item-info-uid">
+                            Артикул: <span>04.01.030.002</span>
+                        </div>
+
+                        <div class="basket__item-info-title">
+                            Мотоблок Мобил К МКМ-3 ПРО MBK0018443
+                        </div>
+
+                        <div class="basket__item-info-descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo egestas accumsan, odio a,
+                        </div>
+                    </div>
+                    <div class="basket__item-count">
+                        <div class="basket__item-count--wrapper">
+                            <div class="basket__item-count-title">
+                                Количество
+                            </div>
+
+                            <div class="basket__item-count--counter">
+                                <button class="basket__item-count--counter-minus">
+                                    -
+                                </button>
+
+                                <div class="basket__item-count--counter-count">1</div>
+
+                                <button class="basket__item-count--counter-plus">
+                                    +
+                                </button>
+                            </div>
+
+                            <div class="basket__item-count-exists">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.0729 1.01082C11.2995 0.797838 11.601 0.680091 11.9138 0.682428C12.2266 0.684765 12.5263 0.807004 12.7495 1.02335C12.9728 1.2397 13.1022 1.53323 13.1105 1.84201C13.1188 2.15079 13.0052 2.45067 12.7938 2.67836L6.37659 10.6031C6.26624 10.7205 6.13306 10.8147 5.98501 10.8801C5.83696 10.9454 5.67707 10.9807 5.51492 10.9836C5.35277 10.9866 5.19168 10.9572 5.04128 10.8973C4.89087 10.8374 4.75425 10.7482 4.63958 10.6349L0.383923 6.43271C0.26541 6.32367 0.170354 6.19217 0.104425 6.04606C0.0384964 5.89995 0.00304539 5.74223 0.000187725 5.5823C-0.00266994 5.42237 0.0271243 5.26351 0.0877924 5.1152C0.14846 4.96689 0.23876 4.83216 0.353304 4.71905C0.467847 4.60595 0.604289 4.51678 0.754488 4.45688C0.904688 4.39697 1.06557 4.36755 1.22753 4.37037C1.3895 4.3732 1.54923 4.4082 1.69719 4.4733C1.84516 4.5384 1.97833 4.63227 2.08876 4.74929L5.45662 8.07325L11.0424 1.04576C11.0524 1.03354 11.0632 1.02187 11.0745 1.01082H11.0729Z"
+                                          fill="#20BD39" />
+                                </svg>
+
+                                <span>В наличии</span>
+                            </div>
+                        </div>
+
+                        <div class="basket__item-price">
+                            56 900₽
+                        </div>
+                    </div>
+
+                    <div class="basket__item-remove">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L20 20" stroke="#CFCCCC" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                            <path d="M1 20L20 1.00002" stroke="#CFCCCC" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <a href="/" class="basket__back-button">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1L1 7L7 13" stroke="black" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                    </svg>
+
+                    <span>
+                        Назад к товарам
+                    </span>
+                </a>
+            </div>
+
+            <div class="basket__result">
+                <div class="basket__result--container">
+                    <div class="basket__result-info">
+                        <div class="basket__result-title">
+                            Заказ
+                        </div>
+
+                        <div class="basket__result-descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo egestas accumsan, odio a,
+                        </div>
+                    </div>
+
+                    <div class="basket__result-calculate">
+                        <div class="basket__result-calculate--field">
+                            <i>
+                                Товаров:
+                            </i>
+
+                            <span>
+                                2
+                            </span>
+                        </div>
+
+                        <div class="basket__result-calculate--field">
+                            <i>
+                                Скидка:
+                            </i>
+
+                            <span>
+                                13 000₽
+                            </span>
+                        </div>
+
+                        <div class="basket__result-calculate--field">
+                            <i>
+                                Итого:
+                            </i>
+                        </div>
+                    </div>
+
+                    <div class="basket__result-price">
+                        <div class="basket__result-price-discount discount">
+                            <span>35 000₽</span>
+                            <div class="catalog-item__mark blue wide">-10%</div>
+                        </div>
+
+                        <div class="basket__result-price-total">
+                            112 000₽
+                        </div>
+                    </div>
+
+                    <div class="basket__result-controls">
+                        {% include "../UI/button.twig" with {
+                            text: "Оформить заказ",
+                            colorClass: "fill-red button-primary_size-large"
+                        } %}
+
+                        {% include "../UI/button.twig" with {
+                            text: "Купить в 1 клик",
+                            colorClass: "bordered-blue button-primary_size-large"
+                        } %}
+                    </div>
+                </div>
+
+                <a href="/" class="basket__back-button">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1L1 7L7 13" stroke="black" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                    </svg>
+
+                    <span>
+                        Назад к товарам
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="basket__adv">
+            {% include "../components/advantages.twig" with {
+                more: true
+            } %}
+        </div>
+
+        {% include "../components/banner-support-info.twig" %}
+    </div>
+</div>

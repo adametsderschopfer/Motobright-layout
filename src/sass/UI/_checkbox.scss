@@ -1,0 +1,45 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  input:checked {
+    + .checkbox-fake {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > svg {
+        display: block !important;
+      }
+    }
+  }
+}
+
+.checkbox-green {
+  svg path {
+    fill: #20BD39;
+  }
+}
+
+.checkbox-fake {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.2rem solid #c6c6c6;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+}
+
+.checkbox-text {
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  line-height: 1.76rem;
+  color: #333333;
+  cursor: default;
+  user-select: none;
+}

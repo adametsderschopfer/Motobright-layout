@@ -24,6 +24,18 @@ body {
   }
 }
 
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img,
+svg {
+  user-select: none;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -149,3 +161,57 @@ button {
   background-color: map-get($gray, color_ed);
   border-radius: 0.3rem;
 }
+
+.discount {
+  color: map_get($gray, c_a8);
+  text-decoration-line: line-through;
+  font-weight: 500;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.block-title {
+  color: #000000;
+  font-size: 3.6rem;
+  font-weight: 500;
+
+  @include bp-mobile() {
+    font-size: 3rem;
+  }
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.tab-item-template {
+  background-color: #F5F5F6;
+  font-weight: 300;
+  font-size: 1.725rem;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+
+  &.active {
+    pointer-events: none;
+    background-color: #F15357;
+    color: #ffffff;
+  }
+
+  svg {
+    margin-left: 1rem;
+  }
+  
+  &:hover {
+    background-color: #F15357;
+    color: #ffffff;
+  }
+}
+
+

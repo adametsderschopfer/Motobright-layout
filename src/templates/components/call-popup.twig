@@ -1,0 +1,9 @@
+<div class="js-call-popup-{{ main }}">
+    <div class="call-popup">
+        {% include "./default-popup-form.twig" with {
+            title: title,
+            descr: 'Нужно заполнить поля в форме',
+            closeBtn: true
+        }%}
+    </div>
+</div>

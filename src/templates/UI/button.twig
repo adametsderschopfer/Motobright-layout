@@ -1,12 +1,30 @@
 {% if href %}
     <a href="{{ href }}" class="button-primary
         {% if colorClass %} button-primary_{{ colorClass }} {% endif %}
+        {% if size %} button-primary_size-{{ size }} {% endif %}
         {% if class %} {{ class }} {% endif %}"
 
             {% if data %} {{ data }} {% endif %}
 
             {% if type %} type="{{ type }}" {% endif %}>
+
+        {% if cartLeft %}
+            <svg class="cartLeft" xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
+                <path d="M8.87302 20.8517C9.39023 20.8517 9.80951 20.4324 9.80951 19.9152C9.80951 19.398 9.39023 18.9787 8.87302 18.9787C8.35581 18.9787 7.93652 19.398 7.93652 19.9152C7.93652 20.4324 8.35581 20.8517 8.87302 20.8517Z" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.1738 20.8517C19.691 20.8517 20.1103 20.4324 20.1103 19.9152C20.1103 19.398 19.691 18.9787 19.1738 18.9787C18.6566 18.9787 18.2373 19.398 18.2373 19.9152C18.2373 20.4324 18.6566 20.8517 19.1738 20.8517Z" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.38086 1.18536H5.12684L7.63664 13.725C7.72228 14.1562 7.95684 14.5435 8.29925 14.8191C8.64167 15.0948 9.07013 15.2412 9.50963 15.2328H18.6124C19.0519 15.2412 19.4803 15.0948 19.8227 14.8191C20.1652 14.5435 20.3997 14.1562 20.4853 13.725L21.9837 5.86784H6.06333" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        {% endif %}
+
         {{ text }}
+
+        {% if cartRight %}
+            <svg class="cartRight" xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
+                <path d="M8.87302 20.8517C9.39023 20.8517 9.80951 20.4324 9.80951 19.9152C9.80951 19.398 9.39023 18.9787 8.87302 18.9787C8.35581 18.9787 7.93652 19.398 7.93652 19.9152C7.93652 20.4324 8.35581 20.8517 8.87302 20.8517Z" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.1738 20.8517C19.691 20.8517 20.1103 20.4324 20.1103 19.9152C20.1103 19.398 19.691 18.9787 19.1738 18.9787C18.6566 18.9787 18.2373 19.398 18.2373 19.9152C18.2373 20.4324 18.6566 20.8517 19.1738 20.8517Z" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.38086 1.18536H5.12684L7.63664 13.725C7.72228 14.1562 7.95684 14.5435 8.29925 14.8191C8.64167 15.0948 9.07013 15.2412 9.50963 15.2328H18.6124C19.0519 15.2412 19.4803 15.0948 19.8227 14.8191C20.1652 14.5435 20.3997 14.1562 20.4853 13.725L21.9837 5.86784H6.06333" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        {% endif %}
 
         {% if svg %}
             {{ svg }}
@@ -15,12 +33,29 @@
 {% else %}
     <button class="button-primary
         {% if colorClass %} button-primary_{{ colorClass }} {% endif %}
+        {% if size %} button-primary_size-{{ size }} {% endif %}
         {% if class %} {{ class }} {% endif %}"
 
             {% if data %} {{ data }} {% endif %}
 
             {% if type %} type="{{ type }}" {% endif %}>
+        {% if cartLeft %}
+            <svg class="cartLeft" xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
+                <path d="M8.87302 20.8517C9.39023 20.8517 9.80951 20.4324 9.80951 19.9152C9.80951 19.398 9.39023 18.9787 8.87302 18.9787C8.35581 18.9787 7.93652 19.398 7.93652 19.9152C7.93652 20.4324 8.35581 20.8517 8.87302 20.8517Z" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.1738 20.8517C19.691 20.8517 20.1103 20.4324 20.1103 19.9152C20.1103 19.398 19.691 18.9787 19.1738 18.9787C18.6566 18.9787 18.2373 19.398 18.2373 19.9152C18.2373 20.4324 18.6566 20.8517 19.1738 20.8517Z" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.38086 1.18536H5.12684L7.63664 13.725C7.72228 14.1562 7.95684 14.5435 8.29925 14.8191C8.64167 15.0948 9.07013 15.2412 9.50963 15.2328H18.6124C19.0519 15.2412 19.4803 15.0948 19.8227 14.8191C20.1652 14.5435 20.3997 14.1562 20.4853 13.725L21.9837 5.86784H6.06333" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        {% endif %}
+
         {{ text }}
+
+        {% if cartRight %}
+            <svg class="cartRight" xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
+                <path d="M8.87302 20.8517C9.39023 20.8517 9.80951 20.4324 9.80951 19.9152C9.80951 19.398 9.39023 18.9787 8.87302 18.9787C8.35581 18.9787 7.93652 19.398 7.93652 19.9152C7.93652 20.4324 8.35581 20.8517 8.87302 20.8517Z" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.1738 20.8517C19.691 20.8517 20.1103 20.4324 20.1103 19.9152C20.1103 19.398 19.691 18.9787 19.1738 18.9787C18.6566 18.9787 18.2373 19.398 18.2373 19.9152C18.2373 20.4324 18.6566 20.8517 19.1738 20.8517Z" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.38086 1.18536H5.12684L7.63664 13.725C7.72228 14.1562 7.95684 14.5435 8.29925 14.8191C8.64167 15.0948 9.07013 15.2412 9.50963 15.2328H18.6124C19.0519 15.2412 19.4803 15.0948 19.8227 14.8191C20.1652 14.5435 20.3997 14.1562 20.4853 13.725L21.9837 5.86784H6.06333" stroke="#E31235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        {% endif %}
 
         {% if svg %}
             {{ svg }}

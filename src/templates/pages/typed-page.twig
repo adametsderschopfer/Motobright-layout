@@ -1,0 +1,75 @@
+{% include "../components/page-info.twig" with {
+    breadcrumbs: ['Главная', 'Типовая страница'],
+    title: "Типовая страница"
+} %}
+
+<div class="container" style="margin-bottom: 4rem;">
+    <div class="typed-page__subtitle">
+        Подзаголовок
+    </div>
+    <div class="typed-page__descr">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie eu molestie gravida augue egestas aenean nulla
+        a. Nam libero risus, luctus nec morbi cursus ac. Enim ultrices mi egestas quam venenatis in mattis tincidunt.
+        Commodo at sed id curabitur dictumst dictum lectus ultrices gravida.Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Molestie eu molestie gravida augue egestas aenean nulla a. Nam libero risus, luctus nec morbi
+        cursus ac. Enim ultrices mi egestas quam venenatis in mattis tincidunt. Commodo at sed id curabitur dictumst
+        dictum lectus ultrices gravida.
+    </div>
+    <a href="/" class="typed-page__link">Подробнее</a>
+</div>
+
+<div class="container" style="margin-bottom: 4rem;">
+    <div class="flex flex-wrap flex_h-between typed-page__row">
+        <div>
+            <div class="typed-page__subtitle">
+                Преимущества
+            </div>
+            <ul class="typed-page__list">
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque quia rati</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad atque explicab</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam facilis illum</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum hic laudantium magnam quas?</li>
+            </ul>
+
+            <div class="typed-page__alert">
+                <b>Важное</b>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae delectus eos et expedita ipsa labore
+                    modi mollitia nemo non officia! Accusantium itaque necessitatibus omnis velit!</p>
+            </div>
+        </div>
+
+        <div>
+            <img src="./assets/images/test-img.png" alt="" class="typed-page__img">
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-bottom: 3rem;">
+    <div class="typed-page__subtitle">
+        Табы
+    </div>
+
+    <div class="flex flex-wrap">
+        <div class="filter__simple-item tab-item-template">
+            <span>ременные</span>
+        </div>
+        <div class="filter__simple-item tab-item-template">
+            <span>редукторные</span>
+        </div>
+        <div class="filter__simple-item tab-item-template">
+            <span>тяжелые</span>
+        </div>
+        <div class="filter__simple-item tab-item-template">
+            <span>с эл. запуском</span>
+        </div>
+        <div class="filter__simple-item tab-item-template">
+            <span>с дифференциалом </span>
+        </div>
+        <div class="filter__simple-item tab-item-template">
+            <span>эксклюзив</span>
+        </div>
+        <div class="filter__simple-item tab-item-template active">
+            <span>эксклюзив</span>
+        </div>
+    </div>
+</div>

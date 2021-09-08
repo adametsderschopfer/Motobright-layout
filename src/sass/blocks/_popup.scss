@@ -21,8 +21,6 @@
   &_hide {
     opacity: 1;
     z-index: 1100;
-    background: rgba(30, 30, 30, 0);
-
     .popup__content-wrap {
       transform: translateY(-30px);
       opacity: 0;
@@ -30,8 +28,6 @@
   }
 
   &_open {
-    background: rgba(30, 30, 30, 1);
-
     .popup__content-wrap {
       transform: translateY(0);
       opacity: 1;
@@ -42,16 +38,19 @@
 .popup__wrap {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+
+  @include bp-tablet() {
+    background-color: #cccccc;
+  }
 }
 
 .popup__content-wrap {
   padding: 65px 0 16px;
-  color: black;
   flex: none;
   overflow: hidden;
-  background-color: $color-dark;
-  border-bottom: 2px solid $color-fuxia;
   transition: all 0.2s ease-out;
   transform: translateY(-30px);
   opacity: 0;

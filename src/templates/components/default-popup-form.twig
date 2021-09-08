@@ -1,0 +1,14 @@
+<div class="default-popup-form" style=" background-image: url('./assets/images/dpf-bgc.png');">
+    {% if closeBtn %}
+        <div class="default-popup-form__close js-default-popup-form__close">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L20 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 20L20 1.00003" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    {% endif %}
+    {% include "./feedback-form.twig" with {
+        title: title|default("Подберем<br />технику под вас!"),
+        descr: "Нужно заполнить поля в форме"
+    } %}
+</div>

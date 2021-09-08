@@ -1,0 +1,24 @@
+<div class="page-info">
+     <div class="container">
+         <div class="page-info__breadcrumbs">
+             {% for crumb in breadcrumbs %}
+                 <a
+                    {% if not loop.last %}
+                        href="javascript:void(0)"
+                    {% endif %}
+                 >
+                     {{ crumb }}
+                 </a>
+             {% endfor %}
+         </div>
+
+         <div class="page-info__title">
+             {{ title }}
+         </div>
+         {% if basket %}
+             <div class="page-info__basket">
+                 В корзине 2 товара на сумму 6 900 руб.
+             </div>
+         {% endif %}
+     </div>
+</div>

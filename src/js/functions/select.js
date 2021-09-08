@@ -8,14 +8,14 @@
         const dropdown = select.querySelector('.js-select-dropdown');
         const changeOptions =  select.querySelectorAll('.js-select-options');
         const selected = select.querySelector('.js-select-option-item');
-
-        if(dropdown.clientHeight > 200) {
-          const ps = new PerfectScrollbar(dropdown, {
-            wheelPropagation: false,
-          });
-          dropdown.style.height = '200px';
-          dropdown.style.overflow = 'hidden';
-        }
+        //
+        // if(dropdown.clientHeight > 200) {
+        //   const ps = new PerfectScrollbar(dropdown, {
+        //     wheelPropagation: false,
+        //   });
+        //   dropdown.style.height = '200px';
+        //   dropdown.style.overflow = 'hidden';
+        // }
 
         trigger.onclick = function () {
           triggerInit()

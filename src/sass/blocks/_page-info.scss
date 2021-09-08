@@ -1,0 +1,49 @@
+.page-info {
+  padding-top: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.page-info__breadcrumbs {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  a {
+    display: block;
+    color: #000000;
+    font-weight: 300;
+    font-size: 1.6rem;
+    text-decoration: none;
+
+    &[href]:hover {
+      text-decoration: underline;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 2.5rem;
+    }
+
+    @include bp-tablet() {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.page-info__title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-top: 2.5rem;
+
+  @include bp-tablet() {
+    font-size: 2.4rem;
+  }
+}
+
+.page-info__basket {
+  font-size: 16px;
+  line-height: 20px;
+  color: #212120;
+  margin-top: 0.5rem;
+  font-weight: 300;
+}

@@ -1,0 +1,53 @@
+.feedback-big {
+  display: flex;
+  position: relative;
+
+  @include bp-tablet() {
+    flex-direction: column-reverse;
+  }
+}
+
+.feedback-big__img {
+  position: absolute;
+  left: -10rem;
+  height: 100%;
+
+  img {
+    height: 100%;
+  }
+
+  @include bp-tablet() {
+    position: relative;
+    left: 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+    bottom: -0.3rem;
+  }
+}
+
+.feedback-big__form {
+  padding: 4.5rem;
+  border-radius: 2rem;
+  height: 45rem;
+  max-width: 84rem;
+  width: 100%;
+  margin-left: auto;
+  z-index: 10;
+  position: relative;
+  margin-bottom: 7rem;
+  margin-top: 2rem;
+
+  @include bp-tablet(min) {
+    background-color: #ffffff;
+    border: 0.3rem solid #f4f4f4;
+  }
+
+  @include bp-tablet() {
+    padding: 0;
+    max-width: 100%;
+    margin-bottom: 4rem;
+  }
+}

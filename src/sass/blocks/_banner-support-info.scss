@@ -1,0 +1,49 @@
+.banner-support-info {
+  background: #222120;
+  border-radius: 1rem;
+  max-height: 22.2rem;
+  height: 100%;
+  overflow: hidden;
+  padding: 4.5rem 6.5rem;
+  position: relative;
+  margin-bottom: 6rem;
+
+  @include bp-tablet() {
+    margin-bottom: 4rem;
+    padding: 2.5rem 3.5rem;
+  }
+}
+
+.banner-support-info__text {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 5;
+  position: relative;
+
+  span {
+    font-size: 3.6rem;
+
+    @include bp-tablet() {
+      font-size: 1.4rem;
+    }
+  }
+
+  b {
+    color: #ff0007;
+    font-size: 4.8rem;
+
+    @include bp-tablet() {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.banner-support-info__image {
+  position: absolute;
+  right: 0;
+  top: -50%;
+  height: 100%;
+  max-width: 50%;
+}

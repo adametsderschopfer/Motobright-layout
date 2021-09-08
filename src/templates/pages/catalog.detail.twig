@@ -1,0 +1,185 @@
+{% set characteristics = [
+    ['Тип двигателя:', '4-х тактный бензиновый'],
+    ['Количество передач:', '3 вперёд, 1 назад'],
+    ['Мощность, л.с.:', '18,5'],
+    ['Ширина обработки, мм:', '800-1200'],
+    ['Глубина обработки, мм:', '150-350'],
+    ['Редуктор:', 'Чугунный'],
+    ['Тип стартера:', 'Электрозапуск'],
+    ['Вал отбора мощности, мм:', '18'],
+    ['Объем масла редуктор, л:', '2,0'],
+    ['Вместимость масла, л:', '1,1'],
+    ['Механизм сцепления:', 'Дисковый'],
+    ['Вал фрез:', 'Шестигранник S32'],
+    ['Вес, кг:', '165'],
+    ['Размер колёс:', '6х12'],
+] %}
+
+{% include "../components/page-info.twig" with {
+    breadcrumbs: ['Главная', 'Каталог', 'Мотоблок BRAIT 135GFE PRO'],
+    title: "Мотоблок BRAIT 135GFE PRO"
+} %}
+
+<div class="catalog-detail">
+    <div class="container">
+        <div class="catalog-detail__body">
+            <div class="catalog-detail__body-top">
+                <div class="catalog-detail__images js-images">
+                    <ul class="catalog-detail__images-list js-images-list">
+                        <li><img src="./assets/images/product-detail-1.png" class="js-images-item" alt=""></li>
+                        <li><img src="./assets/images/product-detail-2.png" class="js-images-item" alt=""></li>
+                        <li><img src="./assets/images/product-detail-3.png" class="js-images-item" alt=""></li>
+                        <li><img src="./assets/images/product-detail-4.png" class="js-images-item" alt=""></li>
+                    </ul>
+
+                    <div class="catalog-detail__images-current">
+                        <img src="./assets/images/product-detail-1.png" class="js-images-current" alt="">
+                    </div>
+                </div>
+
+                <div class="catalog-detail__info">
+                    <div class="catalog-detail__alert">
+                        <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 21C9 21 17 17 17 11V4L9 1L1 4V11C1 17 9 21 9 21Z" stroke="#7C93E7"
+                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <span>Гарантия:</span> <b>2 года от производителя</b>
+                    </div>
+
+                    <div class="catalog-detail__info-exists">
+                        <div class="catalog-detail__info-exists-uid">
+                            <span>Артикул:</span>
+                            <b>04.01.030.002</b>
+                        </div>
+
+                        <div class="catalog-detail__info-exists-col">
+                            <div class="catalog-detail__info-exists--marker">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.0729 1.01082C11.2995 0.797837 11.601 0.680089 11.9138 0.682426C12.2266 0.684763 12.5263 0.807003 12.7495 1.02335C12.9728 1.2397 13.1022 1.53323 13.1105 1.84201C13.1188 2.15079 13.0052 2.45067 12.7938 2.67836L6.37659 10.6031C6.26624 10.7205 6.13306 10.8147 5.98501 10.8801C5.83696 10.9454 5.67707 10.9807 5.51492 10.9836C5.35277 10.9866 5.19168 10.9572 5.04128 10.8973C4.89087 10.8374 4.75425 10.7482 4.63958 10.6349L0.383923 6.43271C0.26541 6.32366 0.170354 6.19217 0.104425 6.04606C0.0384964 5.89995 0.00304539 5.74223 0.000187725 5.5823C-0.00266994 5.42237 0.0271243 5.26351 0.0877924 5.1152C0.14846 4.96689 0.23876 4.83216 0.353304 4.71905C0.467847 4.60595 0.604289 4.51678 0.754488 4.45688C0.904688 4.39697 1.06557 4.36755 1.22753 4.37037C1.3895 4.37319 1.54923 4.4082 1.69719 4.4733C1.84516 4.5384 1.97833 4.63226 2.08876 4.74929L5.45662 8.07325L11.0424 1.04576C11.0524 1.03353 11.0632 1.02187 11.0745 1.01082H11.0729Z"
+                                          fill="#20BD39" />
+                                </svg>
+
+                                <span>В наличии</span>
+                            </div>
+
+                            <div class="catalog-detail__info-exists--count">
+                                45 шт.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-detail__info-price">
+                        <div class="catalog-detail__info-row">
+                            <span class="discount">
+                                35 000₽
+                            </span>
+
+                            <div class="catalog-item__mark blue">
+                                -10%
+                            </div>
+                        </div>
+
+
+                        <span>
+                            32 000₽
+                        </span>
+                    </div>
+
+                    <div class="catalog-detail__info-controls">
+                        {% include "../UI/button.twig" with {
+                            text: "В корзину",
+                            colorClass: "fill-red button-primary_size-large",
+                            cartRight: true
+                        } %}
+
+                        {% include "../UI/button.twig" with {
+                            text: "Купить в 1 клик",
+                            colorClass: "bordered-blue button-primary_size-large",
+                        } %}
+                    </div>
+
+                    <ul class="catalog-detail__info-delivery-list">
+                        <li>
+                            <svg width="20" height="24" viewBox="0 0 20 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 10C19 17 10 23 10 23C10 23 1 17 1 10C1 7.61305 1.94821 5.32387 3.63604 3.63604C5.32387 1.94821 7.61305 1 10 1C12.3869 1 14.6761 1.94821 16.364 3.63604C18.0518 5.32387 19 7.61305 19 10Z"
+                                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10 13C11.6569 13 13 11.6569 13 10C13 8.34315 11.6569 7 10 7C8.34315 7 7 8.34315 7 10C7 11.6569 8.34315 13 10 13Z"
+                                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Самовывоз:</span>
+                            <b>г. Самара, ул. Ленина 1 </b>
+                        </li>
+                        <li>
+                            <svg width="24" height="20" viewBox="0 0 24 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 1H1V14H16V1Z" stroke="black" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                <path d="M16 6H20L23 9V14H16V6Z" stroke="black" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                <path d="M5.5 19C6.88071 19 8 17.8807 8 16.5C8 15.1193 6.88071 14 5.5 14C4.11929 14 3 15.1193 3 16.5C3 17.8807 4.11929 19 5.5 19Z"
+                                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M18.5 19C19.8807 19 21 17.8807 21 16.5C21 15.1193 19.8807 14 18.5 14C17.1193 14 16 15.1193 16 16.5C16 17.8807 17.1193 19 18.5 19Z"
+                                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Доставка:</span>
+                            <a href="/">
+                                <b>подробнее по ссылке</b>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="catalog-detail__characteristics">
+                    {% for item in characteristics %}
+                        <li>
+                            {% for i in item %}
+                                {% if loop.first %}
+                                    <span>{{ i }}</span>
+                                {% endif %}
+                                {% if loop.last %}
+                                    <b>{{ i }}</b>
+                                {% endif %}
+                            {% endfor %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="catalog-detail__body-mid">
+                <div class="catalog-detail-descr">
+                    <div class="block-title">Описание</div>
+
+                    <p>Мотоблоки BRAIT серии PRO - это надежная садово-огородная техника, с помощью которой вы легко
+                        выполните массу сельскохозяйственных операций.</p>
+                    <p>Используются для всевозможных подготовительных и сопутствующих работ с грунтом. Идеально подходит
+                        для работ на участках как средней, так и большой площади, с плотной, слежавшейся почвой.</p>
+                </div>
+
+                <ul class="catalog-detail-mid-adt">
+                    <li>Сцепное устройство изготовлено из высокопрочной стали и адаптировано под российский стандарт.</li>
+                    <li>Регулируемый руль</li>
+                    <li>Мощность двигателя 18,5 л/с</li>
+                    <li>Чугунный редуктор</li>
+                    <li>Высокий разгонный потенциал</li>
+                    <li>Вал отбора мощности</li>
+                    <li>Четыре скорости, 3 вперед и 1 назад</li>
+                    <li>Большие пневматические колеса обеспечивают отличную</li>
+                    <li>проходимость мотоблока по местности</li>
+                    <li>Электрозапуск (аккумулятор в комплекте) </li>
+                </ul>
+            </div>
+        </div>
+
+        {% include  "../components/catalog-similar.twig" %}
+
+        <div class="catalog-detail__only-on-desktop">
+            {% include "../components/advantages.twig" with {
+                more: true,
+                indent: true,
+            } %}
+            {% include "../components/banner-support-info.twig" %}
+        </div>
+    </div>
+</div>

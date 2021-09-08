@@ -1,0 +1,95 @@
+.feedback-from {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-from__title {
+  font-weight: 900;
+  font-size: 3.6rem;
+  margin-bottom: 1.5rem;
+
+  @include bp-tablet() {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.feedback-from__descr {
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+
+  @include bp-tablet() {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.feedback-from__fields {
+  display: flex;
+
+  @include bp-tablet() {
+    flex-direction: column;
+  }
+}
+
+.feedback-from__inputs {
+  display: flex;
+  flex-direction: column;
+  max-width: 35.6rem;
+  min-width: 35.6rem;
+
+  .input-cover:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+
+  @include bp-tablet() {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+
+    .input-cover {
+      margin-bottom: 1.7rem;
+    }
+  }
+}
+
+.feedback-from__wide {
+  width: 100%;
+  margin-left: 2.3rem;
+
+  textarea {
+    resize: none;
+    height: 100%;
+  }
+
+  @include bp-tablet() {
+    margin-left: 0;
+  }
+}
+
+.feedback-from__submit {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+
+  .checkbox-text {
+    max-width: 18rem;
+  }
+
+  @include bp-tablet() {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+.feedback-from__button {
+  width: 22.8rem;
+  margin-right: 3.3rem;
+
+  @include bp-tablet() {
+    width: 19rem;
+    margin-right: 0;
+    margin-top: 2rem;
+  }
+}

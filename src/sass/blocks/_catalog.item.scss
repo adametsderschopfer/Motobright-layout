@@ -1,0 +1,154 @@
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  border: 0.3rem solid map_get($gray, c_ea);
+  border-radius: 0.7rem;
+  background-color: #ffffff;
+  padding: 1.6rem 1.4rem;
+  max-width: 25.2rem;
+  margin: 0 0.8rem 3.1rem;
+  transition: box-shadow 0.2s;
+  user-select: none;
+  position: relative;
+  align-items: center;
+
+  &:hover {
+    box-shadow: 0 20px 26px -21px rgba(0, 0, 0, 0.43);
+  }
+
+  @include bp-desktopXS() {
+    margin: 0 1rem 3.1rem;
+    max-width: 35.2rem;
+  }
+
+  @include bp-tablet() {
+    max-width: 100%;
+    margin: 0 0.5rem 2rem;
+  }
+}
+
+.catalog-item__mark {
+  background-color: #cccccc;
+  font-size: 1.4rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  color: #ffffff;
+
+  &.wide {
+    padding: 0.1rem 0.8rem;
+  }
+
+  &.blue {
+    background-color: map_get($color, primary-blue);
+  }
+
+  &.purple {
+    background-color: map_get($color, purple);
+  }
+
+  @include bp-tablet() {
+    font-size: 0.8rem;
+  }
+}
+
+.catalog-item__img {
+  max-width: 20.4rem;
+  height: 18.4rem;
+  display: block;
+
+  margin-bottom: 2rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @include bp-mobile() {
+    height: 11.2rem;
+  }
+}
+
+.catalog-item__top-mark {
+  position: absolute;
+  left: 1.4rem;
+  top: 1.6rem;
+}
+
+.catalog-item__title {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 400;
+  height: 5.7rem;
+  margin-bottom: 2.5rem;
+  user-select: text;
+  word-break: break-all;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  color: #000000;
+
+  @include bp-tablet() {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.catalog-item__info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.catalog-item__price {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: map-get($gray, c_21);
+  position: relative;
+
+  @include bp-tablet() {
+    font-size: 1.4rem;
+
+    .discount {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.catalog-item__discount {
+  position: absolute;
+  bottom: 100%;
+
+  display: flex;
+  align-items: center;
+
+  > span {
+    margin-right: 0.5rem;
+  }
+}
+
+.catalog-item__exists {
+  span {
+    font-size: 1.4rem;
+
+    @include bp-tablet() {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.catalog-item__cart-btn {
+  margin-top: 2.3rem;
+
+  width: 16rem;
+  margin-right: auto;
+
+  @include bp-mobile() {
+    margin-top: 1.4rem;
+    width: 10rem;
+  }
+}

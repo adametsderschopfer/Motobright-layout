@@ -1,0 +1,163 @@
+{% set products = [
+    {
+        title: "Бензиновый мотоблок PATRIOT Vegas 7 440106505",
+        discount: true,
+        img: "./assets/images/products/product-1.png",
+        price: "32 000₽",
+    },
+    {
+        title: "Мотоблок Мобил К МКМ-3 ПРО MBK0018443",
+        hit: true,
+        img: "./assets/images/products/product-2.png",
+        price: "56 900₽",
+    },
+    {
+        title: "Сельскохозяйственная машина Ресанта МБ-8000-10 70/5/41",
+        img: "./assets/images/products/product-3.png",
+        price: "42 000₽",
+    },
+    {
+        title: "Дизельный мотоблок PATRIOT BOSTON-9DE 440701530",
+        img: "./assets/images/products/product-4.png",
+        price: "86 000₽",
+    },
+    {
+        title: "Мотоблок Champion BC1193",
+        img: "./assets/images/products/product-5.png",
+        price: "62 000₽",
+    },
+    {
+        title: "Дизельный мотоблок PATRIOT BOSTON-9DE 440701530",
+        img: "./assets/images/products/product-4.png",
+        price: "86 000₽",
+    },
+    {
+        title: "Сельскохозяйственная машина Ресанта МБ-8000-10 70/5/41",
+        img: "./assets/images/products/product-3.png",
+        price: "42 000₽",
+    },
+    {
+        title: "Мотоблок Мобил К МКМ-3 ПРО MBK0018443",
+        hit: true,
+        img: "./assets/images/products/product-2.png",
+        price: "56 900₽",
+    },
+    {
+        title: "Дизельный мотоблок PATRIOT BOSTON-9DE 440701530",
+        img: "./assets/images/products/product-4.png",
+        price: "86 000₽",
+    },
+    {
+        title: "Бензиновый мотоблок PATRIOT Vegas 7 440106505",
+        discount: true,
+        img: "./assets/images/products/product-1.png",
+        price: "32 000₽",
+    },
+    {
+        title: "Мотоблок Мобил К МКМ-3 ПРО MBK0018443",
+        hit: true,
+        img: "./assets/images/products/product-2.png",
+        price: "56 900₽",
+    },
+    {
+        title: "Сельскохозяйственная машина Ресанта МБ-8000-10 70/5/41",
+        img: "./assets/images/products/product-3.png",
+        price: "42 000₽",
+    },
+    {
+        title: "Дизельный мотоблок PATRIOT BOSTON-9DE 440701530",
+        img: "./assets/images/products/product-4.png",
+        price: "86 000₽",
+    },
+    {
+        title: "Мотоблок Champion BC1193",
+        img: "./assets/images/products/product-5.png",
+        price: "62 000₽",
+    },
+    {
+        title: "Дизельный мотоблок PATRIOT BOSTON-9DE 440701530",
+        img: "./assets/images/products/product-4.png",
+        price: "86 000₽",
+    },
+    {
+        title: "Сельскохозяйственная машина Ресанта МБ-8000-10 70/5/41",
+        img: "./assets/images/products/product-3.png",
+        price: "42 000₽",
+    },
+    {
+        title: "Мотоблок Мобил К МКМ-3 ПРО MBK0018443",
+        hit: true,
+        img: "./assets/images/products/product-2.png",
+        price: "56 900₽",
+    },
+    {
+        title: "Дизельный мотоблок PATRIOT BOSTON-9DE 440701530",
+        img: "./assets/images/products/product-4.png",
+        price: "86 000₽",
+    },
+    {
+        title: "Сельскохозяйственная машина Ресанта МБ-8000-10 70/5/41",
+        img: "./assets/images/products/product-3.png",
+        price: "42 000₽",
+    },
+    {
+        title: "Дизельный мотоблок PATRIOT BOSTON-9DE 440701530",
+        img: "./assets/images/products/product-4.png",
+        price: "86 000₽",
+    },
+    {
+        title: "Мотоблок Champion BC1193",
+        img: "./assets/images/products/product-5.png",
+        price: "62 000₽",
+    },
+    {
+        title: "Дизельный мотоблок PATRIOT BOSTON-9DE 440701530",
+        img: "./assets/images/products/product-4.png",
+        price: "86 000₽",
+    },
+    {
+        title: "Сельскохозяйственная машина Ресанта МБ-8000-10 70/5/41",
+        img: "./assets/images/products/product-3.png",
+        price: "42 000₽",
+    },
+] %}
+
+<div class="catalog-section js-drop">
+    {% if filter %}
+        <div class="catalog-section__filter">
+            {% include "./catalog.smart-filter.twig" %}
+        </div>
+    {% endif %}
+
+    <div class="catalog-section__head">
+        <span class="catalog-section__head-title">
+            {{ title }}
+        </span>
+
+        {% if filter %}
+            <div class="catalog-section__filter_min">
+                {% include "./catalog.smart-filter.twig" with {
+                    isMin: true
+                } %}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="catalog-section__content">
+        {% for product in products %}
+            {% if max %}
+                {% if loop.index - 1 < max %}
+                    {% include "./catalog.item.twig" with {
+                        product,
+                        isSection: true
+                    } %}
+                {% endif %}
+            {% else %}
+                {% include "./catalog.item.twig" with {
+                    product,
+                    isSection: true
+                } %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

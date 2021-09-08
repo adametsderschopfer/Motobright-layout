@@ -1,0 +1,44 @@
+.catalog-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  margin-bottom: 2rem;
+
+  @include bp-tablet() {
+    margin-bottom: 1rem;
+  }
+}
+
+.catalog-section__head {
+  display: flex;
+  align-items: center;
+
+  &-title {
+    font-size: 3.6rem;
+    font-weight: 500;
+    margin-right: 2rem;
+  }
+}
+
+.catalog-section__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2.5rem -0.8rem 0;
+
+  @include bp-tablet() {
+    margin: 1.5rem -0.5rem 0;
+  }
+}
+
+.catalog-section__item {
+  width: calc((100% - 8rem) / 5);
+
+  @include bp-desktopXS() {
+    width: calc((100% - 6rem) / 3);
+  }
+
+  @include bp-tablet() {
+    width: calc((100% - 2rem) / 2);
+  }
+}

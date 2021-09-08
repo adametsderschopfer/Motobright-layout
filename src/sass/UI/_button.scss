@@ -1,62 +1,133 @@
 .button-primary {
-  transition: all 0.2s;
-  border-radius: 0.3rem;
-  font-family: $font2;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  padding: 1.1rem 2rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: map_get($gray, c_f5);
+  transition: color 0.2s, background-color 0.2s;
   border: none;
+  cursor: pointer;
+  position: relative;
+  height: 4.3rem;
+  color: #212120;
+  text-decoration: none;
 
-  @include font-prop(paragraph-1);
+  @include bp-mobile() {
+    font-size: 1.2rem;
+    height: 2.6rem;
+  }
 
-  &_main {
-    background: map-get($basic, main);
-    color: $color-white;
+  &.white {
+    color: #ffffff;
+  }
 
-    @include bp-tablet(min) {
-      &:hover {
-        background: map-get($basic, primary);
-        color: map-get($basic, main);
+  &_size {
+    &-medium {
+      height: 4.8rem;
+    }
+
+    &-large {
+      height: 5.5rem;
+
+      @include bp-mobile() {
+        height: 4.7rem;
       }
     }
   }
 
-  &_border-white {
-    background: transparent;
-    color: map-get($basic, main);
-    border: 0.1rem solid $color-white;
+  .cartLeft,
+  .cartRight {
+    path {
+      transition: stroke 0.2s;
+    }
 
-    @include bp-tablet(min) {
-      &:hover {
-        background: $color-white;
+    @include bp-mobile() {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+
+  .cartLeft {
+    margin-right: 1.3rem;
+
+    path {
+      stroke: map_get($color, primary-red);
+    }
+  }
+
+  .cartRight {
+    position: absolute;
+    right: 1.4rem;
+
+    path {
+      stroke: #ffffff;
+    }
+  }
+
+  &:hover {
+    font-weight: bold;
+    background-color: map_get($color, primary-red);
+    color: #ffffff;
+
+    .cartLeft {
+      path {
+        stroke: #ffffff;
       }
     }
   }
 
-  &_border-gray {
-    background: transparent;
-    color: map-get($basic, main);
-    border: 0.1rem solid map-get($basic, main);
+  &_fill {
+    &-red {
+      background-color: map_get($color, primary-red);
+      color: #ffffff;
 
-    @include bp-tablet(min) {
       &:hover {
-        background: map-get($basic, primary);
-        border-color: map-get($basic, primary);
+        background-color: map_get($gray, c_f5);
+        color: #212120;
+
+        .cartRight path {
+          stroke: map_get($color, primary-red);
+        }
+      }
+    }
+
+    &-blue {
+      background-color: map_get($color, c_00);
+      color: #ffffff;
+
+      &:hover {
+        background-color: map_get($gray, c_f5);
+        color: #212120;
       }
     }
   }
 
-  &_primary {
-    background: map-get($basic, primary);
-    color: map-get($basic, main);
+  &_bordered {
+    &-blue {
+      border: 0.5rem solid map_get($color, c_00);
 
-    @include bp-tablet(min) {
       &:hover {
-        background: map-get($basic, main);
-        color: $color-white;
+        background-color: map_get($color, c_00);
       }
     }
+
+    &-green {
+      border: 0.3rem solid map_get($color, c_79);
+      height: 3.5rem;
+      background-color: transparent;
+      color: #ffffff;
+      font-size: 1.2rem;
+
+      &:hover {
+        background-color: map_get($color, c_79);
+        font-weight: 400;
+      }
+    }
+  }
+
+  &.black {
+    color: #212120;
   }
 }

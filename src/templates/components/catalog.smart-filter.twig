@@ -1,0 +1,114 @@
+{% if isMin %}
+    <div class="tab-item-template">
+        <span>Цена</span>
+        <svg width="8" height="3" viewBox="0 0 8 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 0L7.4641 3H0.535898L4 0Z" fill="black" />
+        </svg>
+    </div>
+{% else %}
+    <div class="filter js-drop-item">
+        <div class="filter__btn js-drop-button">
+            <span>
+                Фильтр
+            </span>
+            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 7L7 1L13 7" stroke="black" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+            </svg>
+        </div>
+
+        <div class="filter__body js-drop-dropdown">
+            <div class="filter-simple-list">
+                <div class="filter__simple-item">
+                    <div class="tab-item-template">
+                        <span>ременные</span>
+                    </div>
+                </div>
+                <div class="filter__simple-item">
+                    <div class="tab-item-template">
+                        <span>редукторные</span>
+                    </div>
+                </div>
+                <div class="filter__simple-item">
+                    <div class="tab-item-template">
+                        <span>тяжелые</span>
+                    </div>
+                </div>
+                <div class="filter__simple-item">
+                    <div class="tab-item-template">
+                        <span>с эл. запуском</span>
+                    </div>
+                </div>
+                <div class="filter__simple-item">
+                    <div class="tab-item-template">
+                        <span>с дифференциалом</span>
+                    </div>
+                </div>
+                <div class="filter__simple-item">
+                    <div class="tab-item-template">
+                        <span>эксклюзив</span>
+                    </div>
+                </div>
+                <div class="filter__simple-item">
+                    <div class="tab-item-template active">
+                        <span>новые модели 135 max pro</span>
+                    </div>
+                </div>
+                <div class="filter__simple-item">
+                    <div class="tab-item-template active">
+                        <span>дизель 135 max pro</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-specific">
+                <div class="filter-specific__title">
+                    По обрабатываемой площади (соток):
+                </div>
+
+                <div class="filter-specific__list">
+                    <div class="filter-specific__item">
+                        <div class="tab-item-template">
+                            <span>До 2</span>
+                        </div>
+                    </div>
+                    <div class="filter-specific__item">
+                        <div class="tab-item-template">
+                            <span>2-10</span>
+                        </div>
+                    </div>
+                    <div class="filter-specific__item">
+                        <div class="tab-item-template">
+                            <span>10-20</span>
+                        </div>
+                    </div>
+                    <div class="filter-specific__item">
+                        <div class="tab-item-template active">
+                            <span>От 20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-specific">
+                <div class="filter-specific__title">
+                    <span>
+                        По мощности (л.с):
+                    </span>
+
+                    <div class="filter-specific-gap">
+                        <span id="power-slider-min">2</span>
+                        <span>-</span>
+                        <span id="power-slider-max">11</span>
+                    </div>
+                </div>
+
+                <div class="filter-specific__slider" data-min="0" data-max="23" data-min-start="2" data-max-start="11" id="power-slider"></div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+
+
+

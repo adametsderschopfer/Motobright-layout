@@ -1,0 +1,68 @@
+<div class="advantages{{ indent ? ' advantages__indent' }}">
+    <ul class="advantages__list">
+        <li class="advantages__item">
+            <div class="advantages__item-img">
+                <img src="./assets/images/quality-icon.png" alt="">
+            </div>
+
+            <div class="advantages__item-text">
+                <div class="advantages__item-title">
+                    Гарантия качества
+                </div>
+
+                <div class="advantages__item-descr">
+                    Весь товар сертефицирован
+                </div>
+            </div>
+        </li>
+        <li class="advantages__item">
+            <div class="advantages__item-img">
+                <img src="./assets/images/store-mark.img.png" alt="">
+            </div>
+
+            <div class="advantages__item-text">
+                <div class="advantages__item-title">
+                    Оптимальный выбор
+                </div>
+
+                <div class="advantages__item-descr">
+                    Приятные цены на фирменные мотоблоки
+                </div>
+            </div>
+        </li>
+        <li class="advantages__item">
+            <div class="advantages__item-img">
+                <img src="./assets/images/delivery.png" alt="">
+            </div>
+
+            <div class="advantages__item-text">
+                <div class="advantages__item-title">
+                    Доставка по РФ
+                </div>
+
+                <div class="advantages__item-descr">
+                    Доставим быстро, куда нужно
+                </div>
+            </div>
+        </li>
+
+        {% if more %}
+            <li class="advantages__item">
+                <div class="advantages__item-img">
+                    <img src="./assets/images/car-icon.png" alt="">
+                </div>
+
+                <div class="advantages__item-text">
+                    <div class="advantages__item-title">
+                        Доставка в срок
+                    </div>
+
+                    <div class="advantages__item-descr">
+                        Оперативная доставка
+                        и выгрузка товара
+                    </div>
+                </div>
+            </li>
+        {% endif %}
+    </ul>
+</div>

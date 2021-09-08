@@ -1,0 +1,47 @@
+<div class="catalog-item{{ isSection ? " catalog-section__item" }}">
+    {% if product.discount %}
+        <div class="catalog-item__mark catalog-item__top-mark blue wide">Скидка</div>
+    {% endif %}
+    {% if product.hit %}
+        <div class="catalog-item__mark catalog-item__top-mark purple wide">Хит</div>
+    {% endif %}
+
+     <a href="./catalog.detail.html" class="catalog-item__img">
+         <img src="{{ product.img }}" alt="Товар">
+     </a>
+
+    <a href="./catalog.detail.html" class="catalog-item__title">
+        <span>
+            {{ product.title }}
+        </span>
+    </a>
+
+    <div class="catalog-item__info-row">
+        <div class="catalog-item__price">
+            {% if product.discount %}
+                <div class="catalog-item__discount">
+                    <span class="discount">35 000₽</span>
+
+                    <div class="catalog-item__mark blue">-10%</div>
+                </div>
+            {% endif %}
+
+             {{ product.price }}
+        </div>
+
+        <div class="catalog-item__exists">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                <path d="M11.2927 0.625428C11.5192 0.412441 11.8207 0.294694 12.1335 0.297031C12.4463 0.299368 12.746 0.421608 12.9693 0.637955C13.1925 0.854302 13.322 1.14783 13.3302 1.45662C13.3385 1.7654 13.225 2.06527 13.0136 2.29297L6.59631 10.2178C6.48597 10.3351 6.35279 10.4293 6.20473 10.4947C6.05668 10.56 5.8968 10.5953 5.73465 10.5982C5.5725 10.6012 5.4114 10.5718 5.261 10.5119C5.1106 10.452 4.97398 10.3628 4.85931 10.2495L0.60365 6.04731C0.485137 5.93827 0.390081 5.80677 0.324152 5.66066C0.258223 5.51456 0.222772 5.35683 0.219914 5.19691C0.217057 5.03698 0.246851 4.87812 0.307519 4.7298C0.368187 4.58149 0.458486 4.44676 0.57303 4.33366C0.687574 4.22055 0.824015 4.13139 0.974215 4.07148C1.12441 4.01158 1.2853 3.98216 1.44726 3.98498C1.60922 3.9878 1.76895 4.0228 1.91692 4.08791C2.06488 4.15301 2.19805 4.24687 2.30849 4.36389L5.67634 7.68786L11.2621 0.660367C11.2722 0.64814 11.2829 0.636475 11.2943 0.625428H11.2927Z" fill="#20BD39"/>
+            </svg>
+
+            <span>В наличии</span>
+        </div>
+    </div>
+
+    <div class="catalog-item__cart-btn">
+        {% include "../UI/button.twig" with {
+            text: "В корзину",
+            cartLeft: true
+        } %}
+    </div>
+</div>
