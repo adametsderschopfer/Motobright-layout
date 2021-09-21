@@ -981,7 +981,7 @@ var createElementFromHTML = function createElementFromHTML(htmlString) {
           button.addEventListener('click', function () {
             var height = dropdown.scrollHeight;
             var isActive = dropdown.style.height === '0px' || dropdown.style.height === '';
-            dropdown.style.height = "".concat(isActive ? height : 0, "px");
+            dropdown.style.height = "".concat(isActive ? 'auto' : 0);
             item.classList[isActive ? 'add' : 'remove']('active');
             dropdown.style.overflow = isActive ? 'visible' : 'hidden';
           });
@@ -1175,6 +1175,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           var bannerSliderSwiper = document.querySelector('.js-banner-slider-swiper');
           var prev = bannerSliderElement.querySelector('.js-banner-slider-prev') || document.createElement('div');
           var next = bannerSliderElement.querySelector('.js-banner-slider-next') || document.createElement('div');
+          var pagination = bannerSliderElement.querySelector('.js-banner-slider-pagination') || document.createElement('div');
           new Swiper(bannerSliderSwiper, {
             slidesPerView: 'auto',
             spaceBetween: 30,
@@ -1184,6 +1185,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             },
             autoplay: {
               delay: 5000
+            },
+            pagination: {
+              el: pagination,
+              clickable: true
             }
           });
         }

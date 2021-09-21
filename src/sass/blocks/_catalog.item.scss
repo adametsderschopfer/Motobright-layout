@@ -34,6 +34,9 @@
   border-radius: 0.3rem;
   font-weight: 500;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.wide {
     padding: 0.1rem 0.8rem;
@@ -146,6 +149,10 @@
 
   width: 16rem;
   margin-right: auto;
+
+  button {
+    white-space: nowrap;
+  }
 
   @include bp-mobile() {
     margin-top: 1.4rem;

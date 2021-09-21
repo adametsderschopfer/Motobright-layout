@@ -160,13 +160,13 @@
     background-color: transparent;
     outline: none;
     cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
+    appearance: none;
     text-indent: 1px;
-    text-overflow: '';
+    text-overflow: "";
     margin-left: 0.5rem;
     max-width: 5.3rem;
-    border-bottom: 1px dashed #6663E2;
+    border-bottom: 1px dashed #6663e2;
 
     &:focus {
       .wh-contacts--place::after {
@@ -178,7 +178,7 @@
     }
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     right: -0.5rem;
@@ -219,7 +219,7 @@
     flex-direction: column;
     width: 100%;
     background-color: #ffffff;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 
     .wh--cart {
       margin-left: auto;
@@ -304,8 +304,8 @@
     border-radius: 20px;
   }
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     border-radius: 20px;
@@ -314,11 +314,11 @@
     background-color: #000000;
   }
 
-  &:after {
+  &::after {
     top: 0;
   }
 
-  &:before {
+  &::before {
     bottom: 0;
   }
 }

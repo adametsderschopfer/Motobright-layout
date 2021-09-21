@@ -20,6 +20,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  user-select: none;
 
   span {
     font-weight: 500;
@@ -104,6 +105,7 @@
 
 .filter-specific__item {
   margin-right: 1.7rem;
+  margin-bottom: 1.5rem;
 
   @include bp-tablet() {
     margin-right: 1.3rem;

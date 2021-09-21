@@ -67,3 +67,31 @@
 .banner-slider__nav-item_next {
   right: -2rem;
 }
+
+.banner-slider__pagination {
+  position: absolute;
+  bottom: 4.1rem;
+  left: 6.6rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+
+  .swiper-pagination-bullet {
+    display: block;
+    height: 0.5rem;
+    width: 3.5rem;
+    background-color: #E4E6E5;
+    transition: 0.2s;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    
+    &-active {
+      cursor: default;
+      background-color: #000000;  
+    }
+  }
+
+  @include bp-tablet() {
+    display: none;
+  }
+}

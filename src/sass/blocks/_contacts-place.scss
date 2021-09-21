@@ -6,6 +6,7 @@
 
 .contacts-place__wrapper {
   display: flex;
+  align-items: center;
 }
 
 .contacts-place__title {
@@ -22,7 +23,12 @@
 
     .contacts-place__select--body {
       opacity: 1;
+      pointer-events: all;
     }
+  }
+
+  .contacts-place__select--body {
+    pointer-events: none;
   }
 }
 

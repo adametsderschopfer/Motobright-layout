@@ -185,7 +185,7 @@ button {
 }
 
 .tab-item-template {
-  background-color: #F5F5F6;
+  background-color: #f5f5f6;
   font-weight: 300;
   font-size: 1.725rem;
   padding: 1rem 2rem;
@@ -200,18 +200,17 @@ button {
 
   &.active {
     pointer-events: none;
-    background-color: #F15357;
+    background-color: #f15357;
     color: #ffffff;
   }
 
   svg {
     margin-left: 1rem;
   }
-  
+
   &:hover {
-    background-color: #F15357;
+    background-color: #f15357;
     color: #ffffff;
   }
 }
-
 

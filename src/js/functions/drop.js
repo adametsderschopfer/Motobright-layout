@@ -19,7 +19,7 @@
             const height = dropdown.scrollHeight;
             const isActive = dropdown.style.height === '0px' || dropdown.style.height === '';
 
-            dropdown.style.height = `${isActive ? height : 0}px`;
+            dropdown.style.height = `${isActive ? 'auto' : 0}`;
             item.classList[isActive ? 'add' : 'remove']('active');
             dropdown.style.overflow = isActive ? 'visible' : 'hidden';  
           });
